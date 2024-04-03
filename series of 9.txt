@@ -1,0 +1,15 @@
+int main() {
+    int n;
+    int count=9;
+    printf("Enter the number to print:- ");
+    scanf("%d",&n);
+    printf("%d",count);
+    count=count*10+9;
+    for(int i=2;i<=n;i++)
+    {
+            printf("+%d",count);
+            count=count*10+9;
+    }
+
+    return 0;
+}
