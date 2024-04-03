@@ -1,0 +1,15 @@
+int main()
+{
+    int n;
+    printf("Enter the number:- ");
+    scanf("%d",&n);
+    int rem,res=0;
+    while(n!=0)
+    {
+        rem=n%10;
+        n=n/10;
+        res=res*10+rem;
+    }
+    printf("%d",res);
+    return 0;
+}
