@@ -1,0 +1,30 @@
+void add(int a,int b)
+{
+    printf("addition=%d",a+b);
+}
+
+void sub(int a,int b)
+{
+    printf("subtraction=%d",a-b);
+}
+
+void mul(int a,int b)
+{
+    printf("multiplication=%d",a*b);
+}
+
+void div(int a,int b)
+{
+    printf("division=%d",a/b);
+}
+int main()
+{
+    int a=10;
+    int b=5;
+    int ch=0;
+    void(*fun_p[])(int a,int b)={add,sub,mul,div};
+    printf("Enter your choice:- ");
+    scanf("%d",&ch);
+    (fun_p[ch])(a,b);
+    return 0;
+}
