@@ -1,0 +1,28 @@
+int main() {
+    int n;
+    printf("Enter the number of rows:- ");
+    scanf("%d",&n);
+    int a[n];
+    printf("Enter the array elements:- ");
+    for(int i=0;i<n;i++)
+    {
+    scanf("%d",&a[i]);
+    }
+    int temp,rot=2;
+    while(rot)
+    {
+        temp=a[n-1];
+        for(int j=(n-1);j>0;j--)
+        {
+            a[j]=a[j-1];
+        }
+        a[0]=temp;
+        rot--;
+    }
+    printf("The rotated array:-");
+    for(int i=0;i<n;i++)
+    {
+       printf(" %d ",a[i]);
+    }
+    return 0;
+}
