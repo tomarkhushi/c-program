@@ -1,0 +1,29 @@
+int main() {
+    int arr[] = {0, 5, 0, 3, 0, 7, 10, 0};
+   // int size = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Original array: ");
+    for (int i = 0; i < 8; i++) {
+        printf("%d ", arr[i]);
+    }
+
+  
+    int count = 0; 
+    for (int i = 0; i < 8; i++) {
+        if (arr[i] != 0) {
+            arr[count++] = arr[i];
+        }
+    }
+  
+    while (count < 8) {
+        arr[count++] = 0;
+    }
+
+    printf("\nArray after moving zeros to end: ");
+    for (int i = 0; i < 8; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
