@@ -1,0 +1,21 @@
+int fact(int n,int temp)
+{
+    if(n==1)
+    {
+        return temp;
+    }
+    else
+    {
+        return (fact(n-1,n*temp));
+    }
+    
+    
+}
+int main() {
+    int n;
+    printf("Enter a number:- ");
+    scanf("%d",&n);
+    int res=fact(n,1);
+    printf("Factorial :- %d",res);
+    return 0;
+}
