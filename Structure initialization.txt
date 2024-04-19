@@ -1,0 +1,13 @@
+struct student
+{
+    int a;
+    int b;
+}x;
+int main() {
+    struct student y={20,'M'};
+    x.a=10;
+    x.b='K';
+    printf("First way of initialization:- %d  %c\n",x.a,x.b);
+    printf("Second way of initialization:- %d  %c",y.a,y.b);
+    return 0;
+}

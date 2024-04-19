@@ -1,0 +1,31 @@
+int sumofarray(int a[],int n,int res)
+{
+    
+    if(n==0)
+    {
+        return 0;
+    }
+    else if(n==1)
+    {
+        return a[0]+res;
+    }
+    else
+    {
+       return sumofarray(a+1,n-1,(a[0]+res));
+    }
+   
+}
+int main() {
+    int n;
+    printf("Enter number of elements:- ");
+    scanf("%d",&n);
+    int res=0;
+    int a[n];
+    printf("Enter elements:-\n");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("sum=%d",sumofarray(a,n,res));
+    return 0;
+}

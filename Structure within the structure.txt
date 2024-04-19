@@ -1,0 +1,23 @@
+struct point
+{
+    int x;
+    int y;
+};
+struct rect
+{
+    struct point p1;
+    struct point p2;
+};
+
+int main() {
+    struct rect r1;
+    int len,wid;
+    r1.p1.x=5;
+    r1.p1.y=10;
+    r1.p2.x=25;
+    r1.p2.y=30;
+    len=r1.p2.x-r1.p1.x;
+    wid=r1.p2.y-r1.p1.y;
+    printf("area of rectangle = %d",len*wid);
+    return 0;
+}
