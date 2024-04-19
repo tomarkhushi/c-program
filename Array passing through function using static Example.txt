@@ -1,0 +1,28 @@
+int *accept(int n)
+{
+  static int a[100];
+  printf("Enter the elements:-\n ");
+  for(int i=0;i<n;i++)
+  {
+      scanf("%d",&a[i]);
+  }
+  return (a);
+}
+
+int display(int *p,int n)
+{
+     printf("array elements are:-");
+    for(int i=0;i<n;i++)
+    {
+        printf(" %d ",*(p+i));
+    }
+}
+int main()
+{
+  static int n;
+  printf("Enter number of elements:- ");
+  scanf("%d",&n);
+    int *p;
+    p=accept(n);
+    display(p, n);
+}
